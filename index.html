@@ -1,0 +1,43 @@
+<!--
+Name: Mengly Lim
+Course: COMP 4610 GUI I
+Assignment: HW3 - Dynamic Multiplication Table
+Description: This file contains the HTML structure for a single-page web app that
+dynamically generates a multiplication table based on user input.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Multiplication Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Multiplication Table Generator</h1>
+    <form id="mult-form">
+      <label for="startCol">Start Column:</label>
+      <input type="number" id="startCol" name="startCol" min="-50" max="50" required />
+      
+      <label for="endCol">End Column:</label>
+      <input type="number" id="endCol" name="endCol" min="-50" max="50" required />
+      
+      <label for="startRow">Start Row:</label>
+      <input type="number" id="startRow" name="startRow" min="-50" max="50" required />
+      
+      <label for="endRow">End Row:</label>
+      <input type="number" id="endRow" name="endRow" min="-50" max="50" required />
+      
+      <button type="submit">Generate Table</button>
+      <button type="button" onclick="clearTable()">Clear Table</button>
+    </form>
+
+    <div id="error-message"></div>
+    <div id="table-container"></div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
